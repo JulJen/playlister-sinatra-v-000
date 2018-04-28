@@ -6,6 +6,6 @@
 <% end %>
 
 
-<% @genres.each do |genre| %>
+<% Genre.all.each do |genre| %>
   <li><a href="/songs/<%= genre.slug %>"><%= genre.name %></a></li>
 <% end %>
