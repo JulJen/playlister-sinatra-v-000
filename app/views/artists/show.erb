@@ -7,8 +7,8 @@
 <% end %>
 
 <% @artist.songs.each do |song| %>
-  <li><a href="/songs/<%= song.slug %>"<%= song.name %></a></li>
-  <% end %>
+    <li><a href="/songs/<%= song.slug %>"><%= song.name %> </a></li>
+<% end %>
 
 
 <h3>Genres: </h3>
