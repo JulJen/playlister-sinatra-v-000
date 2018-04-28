@@ -6,7 +6,7 @@
 
 <h3>By Artist:</h3>
 
-<% @song.artist.each do |artist| %>
+<% @song.each do |artist| %>
   <p><a href="/artist/<%= artist.slug %>"><%= artist.name %> </a></p>
 <% end %>
 
