@@ -2,10 +2,10 @@
 
 
 <% if @genres.length == 0 %>
-"Not working!!!"
+  "Not working!!!"
 <% end %>
 
 
-<% @genres.each do |genre| %>
-  <li><a href="/genres/<%= genre.slug %>"><%= genre.name %></a></li>
+<% @genres.each do |genre| %>\
+  <li><a href="/genres/<%= genre.slug %>"> <%= genre.name %></a></li>
 <% end %>
