@@ -1,0 +1,20 @@
+<h1>Create a new song:</h1>
+
+<form action ="/songs" method="POST">
+
+  <label for="artist_name">Artist: </label>
+  <input type="text" name="artist_name">
+
+  <br></br>
+
+  <label for="song_name">Song: </label>
+  <input type="text" name="song_name">
+
+  <!-- <br></br> -->
+
+  <!-- <label for="genre_name">Genre: </label>
+  <input type="text" name="genre_name"> -->
+
+  <% Genre.all.each do |genre| %>
+  <label><%= genre.name %></label>
+  <% end %>
