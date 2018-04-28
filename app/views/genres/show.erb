@@ -6,7 +6,7 @@
 
 <ol>
 <% @genre.artists.each do |artist| %>
-    <li><a href="/artists/<%= artist.slug %>"><%= artist.name %> </a></li>
+    <li><a href="/artists/<%= genre.slug %>"><%= genre.name %> </a></li>
 <% end %>
 </ol>
 
