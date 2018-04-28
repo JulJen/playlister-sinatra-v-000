@@ -1,9 +1,5 @@
 <h1>Artists by Genre:</h1>
 
-<% if flash.has?(:message) %>
-  <%= flash[:message] %>
-<% end %>
-
 <ol>
 <% @genre.artists.each do |artist| %>
     <li><a href="/artists/<%= genre.slug %>"><%= genre.name %> </a></li>
