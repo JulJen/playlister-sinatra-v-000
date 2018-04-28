@@ -18,10 +18,10 @@ class SongsController < ApplicationController
   end
 
 
-  get "/songs/#{@song.slug}" do
-    @song = Song.find_by_slug(params[:slug])
-    redirect '/songs/:slug/edit'
-  end
+  # get "/songs/#{@song.slug}" do
+  #   @song = Song.find_by_slug(params[:slug])
+  #   redirect '/songs/:slug/edit'
+  # end
 
   post '/songs' do
     @song = Song.create(:name => params["song_name"])
