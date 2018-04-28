@@ -2,7 +2,7 @@
 
 <h3>Songs: </h3>
 
-<% if @artists.all == 0 %>
+<% if @artists.songs.all == 0 %>
 "Not working!!!"
 <% end %>
 
@@ -13,6 +13,10 @@
 
 <h3>Genres: </h3>
 
+<% if @artists.genres.all == 0 %>
+"Not working!!!"
+<% end %>
+
 <% @artist.genres.each do |genre| %>
-  <li><a href="/genres/<%= genre.slug %>"<%= genre.name %></a></li>
-  <% end %>
+  <li><a href="/genres/<%= genre.slug %>"><%= genre.name %> </a></li>
+<% end %>
