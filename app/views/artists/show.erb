@@ -2,20 +2,12 @@
 
 <h3>Songs: </h3>
 
-<% if @artists.songs.first == 0 %>
-"Not working!!!"
-<% end %>
-
 <% @artist.songs.each do |song| %>
     <li><a href="/songs/<%= song.slug %>"><%= song.name %> </a></li>
 <% end %>
 
 
 <h3>Genres: </h3>
-
-<% if @artists.genres.first == 0 %>
-"Not working!!!"
-<% end %>
 
 <% @artist.genres.each do |genre| %>
   <li><a href="/genres/<%= genre.slug %>"><%= genre.name %> </a></li>
