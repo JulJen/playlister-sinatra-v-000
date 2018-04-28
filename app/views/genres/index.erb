@@ -5,8 +5,7 @@
 "Not working!!!"
 <% end %>
 
-<ol>
+
 <% @genres.each do |genre| %>
   <li><a href="/songs/<%= genre.slug %>"><%= genre.name %></a></li>
 <% end %>
-</ol>
