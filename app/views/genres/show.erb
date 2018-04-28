@@ -1,7 +1,7 @@
 <h1>Genre: <%= @genre.name %></h1>
 
 
-<h3>Artists by Genre:</h3>
+<h3>Artists by <%= @genre.name %> Genre:</h3>
 
 <ol>
 <% @genre.artists.each do |artist| %>
@@ -10,7 +10,7 @@
 </ol>
 
 
-<h3>Songs by Genre: </h3>
+<h3>Songs by <%= @genre.name %> Genre: </h3>
 
 <ol>
 <% @genre.songs.each do |song| %>
