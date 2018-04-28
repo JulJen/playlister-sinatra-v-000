@@ -24,6 +24,12 @@ class SongsController < ApplicationController
     @song.save
   end
 
+  get '/songs/:slug/edit' do
+    @song = Song.find_by_slug(params[:slug])
+    erb :'/songs/show'
+  end
+
+
   post '/set-flash' do
     # Set a flash entry
     flash[:notice] = "Success! New song added!"
