@@ -15,7 +15,7 @@
   <!-- <label for="genre_name">Genre: </label>
   <input type="text" name="genre_name"> -->
   <% Genre.all.each do |genre| %>
-      <label><input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"></label>
+      <label><%= genre.name %><input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"></label>
   <% end %>
   
 
