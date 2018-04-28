@@ -3,13 +3,6 @@ require 'rack-flash'
 class SongsController < ApplicationController
   use Rack::Flash
 
-# presents the user with a list of all songs in the library
-# each song is a clickable link to that particular song's show page
-
-  # get '/' do
-  #   erb :index
-  # end
-
   get '/songs' do
     @songs = Song.all
     erb :'songs/index'
