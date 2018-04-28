@@ -17,12 +17,6 @@ class SongsController < ApplicationController
     erb :'/songs/show'
   end
 
-
-  # get "/artist/#{@song.slug}" do
-  #   @song = Song.find_by_slug(params[:slug])
-  #   redirect '/songs/:slug/edit'
-  # end
-
   post '/songs' do
     @song = Song.create(:name => params["song_name"])
     @song.artist = Artist.find_or_create_by(:name => params["artist_name"])
