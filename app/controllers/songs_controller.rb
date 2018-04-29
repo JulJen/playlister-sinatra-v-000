@@ -44,17 +44,4 @@ class SongsController < ApplicationController
     redirect "/songs/#{@song.slug}"
   end
 
-
-  post '/set-flash' do
-    # Set a flash entry
-    flash[:notice] = "Success! New song added!"
-
-    # Get a flash entry
-    flash[:notice] # => "Success!"
-
-    # Set a flash entry for only the current request
-    flash.now[:notice] = "New song successfully added!"
-  end
-
-
 end
